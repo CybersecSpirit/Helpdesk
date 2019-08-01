@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Mademoiselle Bio</title>
+  <style>
+    body {
+      width : 800px;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      align-items: center;
+    }
+    .conteneur{
+      width:100%;
+      height:50px;
+      align-items: center;
+      display: flex;
+    }
+    h1 {
+      width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      text-align: center;
+    }
+    .form{
+      width: 100%;
+    }
+    label {
+      margin-right:10px;
+      width: 200px;
+    }
+    #bio{
+      color: #e6007e
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Assistance Mademoiselle  <span id="bio">Bio</span></h1>
+  <form method="post" action "/">
+    <div class='conteneur'>
+    <label for="nom">Nom</label>
+    <input type="text" id="nom" class="form"/></div>
+    <div class="conteneur">
+    <label for='magasin'>Magasin</label>
+    <select name="magasin" class="form">
+      <option value="" selected>-- Selectionnez une option --</option>
+      <option value="archives">Archives</option>
+      <option value="batignolles">Batignolles</option>
+      <option value="bordeaux">Bordeaux</option>
+      <option value="caulaincourt">Caulaincourt</option>
+      <option value="cler">Cler</option>
+      <option value="lamartine">Lamartine</option>
+      <option value="lepic">Lepic</option>
+      <option value="poteau">Poteau</option>
+      <option value="raspail">Raspail</option>
+      <option value="saintantoine">Saint-Antoine</option>
+      <option value="saintmartin">Saint-Martin</option>
+      <option value="sevres">Sèvres</option>
+      <option value="vaugirard">Vaugirard</option>
+    </select></div>
+    <div class="conteneur">
+    <label for='service'>Service de Destination</label>
+    <select name="service" class="form">
+      <option value="" selected>-- Selectionnez une option --</option>
+      <option value="info">Informatique</option>
+      <option value="web">Web</option>
+      <option value="rh">Ressources Humaines</option>
+      <option value="compta">Comptabilité</option>
+    </select></div>
+    <div class='conteneur'>
+    <label for="message">Message</label>
+    <textarea id="message" class="form"></textarea></div>
+    <div class='conteneur'> <input type="submit" /> </div>
+
+      </select>
+  </form>
+
+</body>
+</html>
