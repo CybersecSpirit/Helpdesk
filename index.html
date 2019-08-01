@@ -10,10 +10,11 @@
       margin-left: auto;
       margin-right: auto;
       align-items: center;
+      color : #4f5858;
     }
     .conteneur{
       width:100%;
-      height:50px;
+      height:40px;
       align-items: center;
       display: flex;
     }
@@ -23,6 +24,7 @@
       margin-right: auto;
       display: flex;
       text-align: center;
+      color:#4f5858;
     }
     .form{
       width: 100%;
@@ -32,14 +34,18 @@
       width: 200px;
     }
     #bio{
-      color: #e6007e
+      color: #e6007e;
+      margin-left: 10px;
+    }
+    #textarea {
+      margin-top:20px;
     }
 
   </style>
 </head>
 <body>
-  <h1>Assistance Mademoiselle  <span id="bio">Bio</span></h1>
-  <form method="post" action "/">
+  <h1>Assistance Mademoiselle <span id="bio">Bio</span></h1>
+  <form method="post" action "/post/">
     <div class='conteneur'>
     <label for="nom">Nom</label>
     <input type="text" id="nom" class="form"/></div>
@@ -69,11 +75,12 @@
       <option value="web">Web</option>
       <option value="rh">Ressources Humaines</option>
       <option value="compta">Comptabilité</option>
+      <option value="mrkt">Marketing</option>
     </select></div>
-    <div class='conteneur'>
+    <div class='conteneur' id="textarea">
     <label for="message">Message</label>
     <textarea id="message" class="form"></textarea></div>
-    <div class='conteneur'> <input type="submit" /> </div>
+  </br></br><div class='conteneur'> <input type="submit" /> </div>
 
       </select>
   </form>
