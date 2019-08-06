@@ -18,8 +18,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
   var service = postBody.service ;
   var magasin = postBody.magasin;
   var msg = postBody.texte;
-  //db.NewTopic(nom, magasin, service, msg);
-  console.log(db);
+  db.newTopic(nom, magasin, service, msg);
+  console.log("done");
 })
 .get('/client',function(req, res){
   res.render('viewClient.ejs',{});
