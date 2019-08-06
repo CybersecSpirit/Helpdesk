@@ -6,7 +6,7 @@ const dbase = require('baseDonnee');
 const bodyParser = require('body-parser');
 const app = express();
 
-const db = new DataBase();
+const db = new dbase();
 
 app.use(bodyParser.urlencoded({ extended: false }))
 .get('/', function(req, res){
