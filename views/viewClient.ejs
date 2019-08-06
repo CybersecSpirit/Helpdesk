@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Support Mademoiselle Bio</title>
+    </head>
+
+    <body>
+      <h1>Magasin : <%= magasin %></h1>
+      <% tickets.forEach(function(ticket){
+        %><div><a href="/">
+          <h3>Service : <%= ticket.service %> </h3>
+          <h4>Heure : <%= ticket.heure %> </h4>
+          <p><%= ticket.texte>%></p>
+          </a>
+        </div><%
+      }) %>
+    </body>
+</html>

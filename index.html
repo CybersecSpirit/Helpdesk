@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Mademoiselle Bio</title>
+  <title>Support Mademoiselle Bio</title>
   <style>
     body {
       width : 800px;
@@ -45,13 +45,13 @@
 </head>
 <body>
   <h1>Assistance Mademoiselle <span id="bio">Bio</span></h1>
-  <form method="post" action "/post/">
+  <form method="post" action="/post">
     <div class='conteneur'>
     <label for="nom">Nom</label>
-    <input type="text" id="nom" class="form"/></div>
+    <input type="text" name="nom" id="nom" class="form"/></div>
     <div class="conteneur">
     <label for='magasin'>Magasin</label>
-    <select name="magasin" class="form">
+    <select name="magasin" id="magasin" class="form">
       <option value="" selected>-- Selectionnez une option --</option>
       <option value="archives">Archives</option>
       <option value="batignolles">Batignolles</option>
@@ -69,7 +69,7 @@
     </select></div>
     <div class="conteneur">
     <label for='service'>Service de Destination</label>
-    <select name="service" class="form">
+    <select name="service" id="service" class="form">
       <option value="" selected>-- Selectionnez une option --</option>
       <option value="info">Informatique</option>
       <option value="web">Web</option>
@@ -79,11 +79,11 @@
     </select></div>
     <div class='conteneur' id="textarea">
     <label for="message">Message</label>
-    <textarea id="message" class="form"></textarea></div>
+    <textarea id="message" name='texte' class="form"></textarea></div>
   </br></br><div class='conteneur'> <input type="submit" /> </div>
 
       </select>
   </form>
-
+<a href="/client"> Acceder à mes tickets</a>
 </body>
 </html>
