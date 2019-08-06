@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
   var magasin = postBody.magasin;
   var msg = postBody.texte;
   db.newTopic(nom, magasin, service, msg);
-  console.log("done");
+  res.send("Message Envoyé");
 })
 .get('/client',function(req, res){
   res.render('viewClient.ejs',{});
