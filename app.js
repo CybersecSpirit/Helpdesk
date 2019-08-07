@@ -24,9 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 .post('/client',function (req, res) {
   const postBody = req.body;
   var magasin = postBody.magasin ;
-  var client =  db.getTopicMagasin(magasin);
-
-  //res.render('viewClient.ejs',{magasin : magasin, tickets: client});
+  db.getTopicMagasin(magasin, res);
 })
 .get('/admin', function(req, res){
   var client = db.getTopicService();
