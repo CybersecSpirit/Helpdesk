@@ -7,13 +7,14 @@
 
     <body>
       <h1>Magasin : <%= magasin %></h1>
-      <% tickets.forEach(function(ticket){
-        %><div><a href="/">
-          <h3>Service : <%= ticket.service %> </h3>
-          <h4>Heure : <%= ticket.heure %> </h4>
-          <p><%= ticket.texte>%></p>
-          </a>
-        </div><%
-      }) %>
+      <%
+      tickets.forEach(function(ticket){
+      %>
+      <div><a href="/">
+        <h3>Service : <%= ticket.service %> </h3>
+        <h4>Heure : <%= ticket.heure %> </h4>
+        <p><%= ticket.texte>%></p>
+      </a></div>
+    <% }); %>
     </body>
 </html>

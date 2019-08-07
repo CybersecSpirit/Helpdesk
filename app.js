@@ -21,11 +21,19 @@ app.use(bodyParser.urlencoded({ extended: false }))
   db.newTopic(nom, magasin, service, msg);
   res.send("Message Envoyé");
 })
-.get('/client',function(req, res){
-  res.render('viewClient.ejs',{});
+.post('/client',function (req, res) {
+  const postBody = req.body;
+  var magasin = postBody.magasin ;
+  var client =  db.getTopicMagasin(magasin);
+
+  //res.render('viewClient.ejs',{magasin : magasin, tickets: client});
 })
 .get('/admin', function(req, res){
+  var client = db.getTopicService();
   res.render('viewAdmin.ejs',{});
+})
+.get('/connexion', function(req, res){
+  res.sendFile(path.join(__dirname +'/connexion.html'));
 })
 
 
